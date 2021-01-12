@@ -37,7 +37,6 @@ for i in range(W - 5):
     for j in range(H - 5):
         new_gray[i, j] = np.sum(gray[i:i + 5, j:j + 5] * gaussian)  # 与高斯矩阵卷积实现滤波
 # new_gray = gray[:W - 5, :H - 5]
-# plt.imshow(new_gray, cmap="gray")
 
 
 # step2.增强 通过求梯度幅值
@@ -104,6 +103,7 @@ for i in range(1, W2 - 1):
                 NMS[i, j] = 0
 
 # plt.imshow(NMS, cmap = "gray")
+
 
 
 # step4. 双阈值算法检测、连接边缘
